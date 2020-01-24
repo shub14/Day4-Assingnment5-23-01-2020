@@ -104,8 +104,8 @@ public void editCustomerDetails() {
 }
 public void removeCustomer() {
 	try {
-		prest=con.prepareStatement("deleteCustomer from Customer where customer_id=?");
-		 prest.setInt(5,2 );
+		prest=con.prepareStatement("delete Customer from Customer where customer_fname=?");
+		 prest.setString(1,"skks");
 		 int in=prest.executeUpdate();
 		 if(in>0)
 			 System.out.println("Customer deleted");
